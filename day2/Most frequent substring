@@ -1,0 +1,31 @@
+"""Given an array containing N words consisting of lowercase characters.
+Your task is to find the most frequent word in the array.
+If multiple words have same frequency, then print the word whose first occurence occurs last in the array as compared to the other strings with same frequency."""
+def mostFreq(arr):
+    hash={}
+    for i in arr:
+        if i in hash:
+            hash[i]+=1
+        else:
+            hash[i]=1
+    max=0
+    freq=""
+    for i in hash:
+        if hash[i]>max:
+            max=hash[i]
+            freq=i
+        elif hash[i]==max:
+            max=hash[i]
+            if(freq==""):
+                freq=i
+            else:
+                freq=min(freq,i)
+    return freq
+    
+t=int(input())
+for tt in range(t):
+    n=int(input())
+    arr=input().split()
+    print(mostFreq(arr))
+    
+
