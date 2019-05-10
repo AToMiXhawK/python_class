@@ -1,6 +1,7 @@
 """Given an array containing N words consisting of lowercase characters.
 Your task is to find the most frequent word in the array.
 If multiple words have same frequency, then print the word whose first occurence occurs last in the array as compared to the other strings with same frequency."""
+
 def mostFreq(arr):
     hash={}
     for i in arr:

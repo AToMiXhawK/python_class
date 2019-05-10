@@ -1,4 +1,5 @@
 """Given a number, you need to check whether any permutation of the number is divisible by 8 or not. Print Yes or No."""
+
 for testcase in range(int(input())):
     N = input()
     lst = []
